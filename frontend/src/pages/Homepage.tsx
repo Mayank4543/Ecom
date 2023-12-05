@@ -41,7 +41,7 @@ const reducer = (state: State, action: Action) => {
 }
 
 export default function Homepage() {
-    const [{ loading, error, products }, dispatch] = useReducer<
+    const [{ loading, error, products: [] }, dispatch] = useReducer<
         React.Reducer<State, Action>
     >(reducer, initialState)
     useEffect(() => {
